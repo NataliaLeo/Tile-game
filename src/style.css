@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 0;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+}
+
+html {
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tile {
+  margin: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(167, 167, 170, 0.4);
+  -webkit-box-shadow: 8px 8px 1px 1px rgba(167, 167, 170, 0.4);
+          box-shadow: 8px 8px 1px 1px rgba(167, 167, 170, 0.4);
+  text-align: center;
+  padding: 15px 5px;
+  overflow: hidden;
+}
+
+.tile img {
+  height: 170px;
+  width: 100px;
+}
+
+.tile.tile-closed {
+  background: #f1f1c6 none repeat scroll 0% 0%;
+}
+
+.tile.tile-closed img {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

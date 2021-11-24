@@ -1,0 +1,23 @@
+$tile-width: 120px;
+$tile-height: 200px;
+
+.tile {
+	margin: 10px 20px;
+	border-radius: 5px;
+	border: 1px solid rgba(167, 167, 170, 0.4);
+	box-shadow: 8px 8px 1px 1px rgba(167, 167, 170, 0.4);
+
+	text-align: center;
+	padding: 15px 5px;
+	overflow: hidden;
+	img {
+		height: $tile-height - 30px;
+		width: $tile-width - 20px;
+	}
+	&.tile-closed {
+		background: rgb(241, 241, 198) none repeat scroll 0% 0%;
+		img {
+			display: none;
+		}
+	}
+}
