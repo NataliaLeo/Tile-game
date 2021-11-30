@@ -23,15 +23,19 @@ function App() {
 
 	const [pics, setPics] = useState([{ id: "1", img: pic1 }]);
 
-	//const [count, setCount] = useState(0);
+	const [status, setStatus] = useState(0);
 
-	// function Printer() {
-	// 	console.log(Math.random);
-	// }
+	const [count, setCount] = useState(1);
+
+	function Counter() {
+		setStatus(1);
+		setCount(count === 2 ? 1 : count + 1);
+		count === 2 ? console.log("close!!!") : console.log(count);
+	}
 
 	const [amount, setAmount] = useState(2);
 	function AmountPlus() {
-		setAmount(amount === 20 ? 20 : amount + 2);
+		setAmount(amount === 16 ? 16 : amount + 2);
 		setPics(arr.slice(0, amount / 2 + 1));
 		//console.log(Math.floor(Math.random() * 10));
 	}
@@ -44,7 +48,7 @@ function App() {
 		<div className="game-place">
 			<div className="set-amount-block">
 				<button
-					disabled={amount === 2}
+					disabled={amount === 2 || status === 1}
 					onClick={AmountMinus}
 					style={{ width: 100, height: 50 }}
 				>
@@ -52,14 +56,14 @@ function App() {
 				</button>
 				<p>{amount}</p>
 				<button
-					disabled={amount === 20}
+					disabled={amount === 16 || status === 1}
 					onClick={AmountPlus}
 					style={{ width: 100, height: 50 }}
 				>
 					+
 				</button>
 			</div>
-			<div className="container">
+			<div className="container" onClick={Counter}>
 				{pics.map((pic) => (
 					<Tile background={pic.img} key={pic.id}></Tile>
 				))}
