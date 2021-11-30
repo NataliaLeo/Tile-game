@@ -94,14 +94,18 @@ body {
   border: 1px solid rgba(167, 167, 170, 0.4);
   -webkit-box-shadow: 8px 8px 1px 1px rgba(167, 167, 170, 0.4);
           box-shadow: 8px 8px 1px 1px rgba(167, 167, 170, 0.4);
+  height: 250px;
+  width: 150px;
   text-align: center;
-  padding: 15px 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
 }
 
 .tile img {
-  height: 220px;
-  width: 130px;
+  height: 240px;
+  width: 140px;
   -webkit-transition: 0.05s linear;
   transition: 0.05s linear;
 }
@@ -112,5 +116,16 @@ body {
 
 .tile.tile-closed img {
   opacity: 0;
+}
+
+@media (max-width: 1000px) {
+  .tile {
+    width: 120px;
+    height: 140px;
+  }
+  .tile img {
+    width: 110px;
+    height: 130px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

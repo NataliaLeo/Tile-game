@@ -61,20 +61,10 @@ function App() {
 			</div>
 			<div className="container">
 				{pics.map((pic) => (
-					<Tile
-						height="250px"
-						width="150px"
-						background={pic.img}
-						key={pic.id}
-					></Tile>
+					<Tile background={pic.img} key={pic.id}></Tile>
 				))}
 				{pics.map((pic) => (
-					<Tile
-						height="250px"
-						width="150px"
-						background={pic.img}
-						key={pic.id}
-					></Tile>
+					<Tile background={pic.img} key={pic.id}></Tile>
 				))}
 			</div>
 		</div>
